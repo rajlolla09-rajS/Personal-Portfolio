@@ -228,18 +228,45 @@ function About() {
         </div>
 
         <div className="mt-16 grid gap-10 lg:grid-cols-[0.9fr_1.1fr] items-start">
-          {/* LEFT — Portrait card */}
+          {/* LEFT — Identity card (no photo) */}
           <div className="relative lg:sticky lg:top-28">
             <div className="absolute -inset-4 rounded-[2rem] bg-[image:var(--gradient-primary)] opacity-25 blur-2xl animate-pulse-glow" />
             <div className="relative glass rounded-[2rem] p-3 glow-ring overflow-hidden">
-              <div className="relative rounded-3xl overflow-hidden">
-                <img
-                  src={profile}
-                  alt="Portrait"
-                  className="w-full aspect-[4/5] object-cover"
-                  loading="lazy"
+              <div className="relative rounded-3xl overflow-hidden aspect-[4/5] bg-card">
+                {/* Layered gradients */}
+                <div className="absolute inset-0 bg-[image:var(--gradient-hero)]" />
+                <div
+                  aria-hidden
+                  className="absolute inset-0 opacity-[0.08]"
+                  style={{
+                    backgroundImage:
+                      "linear-gradient(var(--foreground) 1px, transparent 1px), linear-gradient(90deg, var(--foreground) 1px, transparent 1px)",
+                    backgroundSize: "28px 28px",
+                  }}
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-background via-background/40 to-transparent" />
+                <div className="absolute -top-24 -left-24 h-72 w-72 rounded-full bg-primary/40 blur-3xl" />
+                <div className="absolute -bottom-24 -right-24 h-72 w-72 rounded-full bg-accent/40 blur-3xl" />
+
+                {/* Centerpiece */}
+                <div className="relative h-full w-full grid place-items-center px-6">
+                  <div className="text-center">
+                    <div className="text-[7rem] sm:text-[9rem] font-display font-bold leading-none text-gradient tracking-tighter">
+                      LR
+                    </div>
+                    <div className="mt-3 text-[11px] uppercase tracking-[0.4em] text-muted-foreground">
+                      Lolla Raj Venkata Apuroop
+                    </div>
+                    <div className="mt-6 flex flex-wrap justify-center gap-2">
+                      {["AI", "Full Stack", "UI/UX"].map((t) => (
+                        <span key={t} className="rounded-full glass px-3 py-1 text-[10px] font-semibold uppercase tracking-widest">
+                          {t}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+
+                <div className="absolute inset-0 bg-gradient-to-t from-background/70 via-transparent to-transparent" />
 
                 {/* Floating badges */}
                 <div className="absolute top-4 left-4 glass rounded-full px-3 py-1.5 text-[11px] font-semibold flex items-center gap-1.5 animate-float">
