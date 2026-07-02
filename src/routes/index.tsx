@@ -27,7 +27,7 @@ import {
 import { useState, type FormEvent } from "react";
 import { Nav } from "@/components/portfolio/Nav";
 import { Typewriter } from "@/components/portfolio/Typewriter";
-import profile from "@/assets/profile.jpg";
+
 
 export const Route = createFileRoute("/")({
   component: Index,
