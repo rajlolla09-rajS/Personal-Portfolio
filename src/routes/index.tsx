@@ -27,6 +27,9 @@ import {
 import { useState, type FormEvent } from "react";
 import { Nav } from "@/components/portfolio/Nav";
 import { Typewriter } from "@/components/portfolio/Typewriter";
+import profileAsset from "@/assets/profile.png.asset.json";
+
+const profile = profileAsset.url;
 
 
 export const Route = createFileRoute("/")({
@@ -149,33 +152,14 @@ function Hero() {
           <div className="relative">
             <div className="absolute -inset-6 rounded-[2rem] bg-[image:var(--gradient-primary)] opacity-30 blur-2xl animate-pulse-glow" />
             <div className="relative h-80 w-80 sm:h-[26rem] sm:w-[26rem] rounded-[2rem] p-[2px] bg-[image:var(--gradient-primary)] animate-float">
-              <div className="relative h-full w-full rounded-[calc(2rem-2px)] overflow-hidden bg-card glow-ring grid place-items-center">
-                {/* Grid pattern */}
-                <div
-                  aria-hidden
-                  className="absolute inset-0 opacity-[0.09]"
-                  style={{
-                    backgroundImage:
-                      "linear-gradient(var(--foreground) 1px, transparent 1px), linear-gradient(90deg, var(--foreground) 1px, transparent 1px)",
-                    backgroundSize: "32px 32px",
-                  }}
+              <div className="relative h-full w-full rounded-[calc(2rem-2px)] overflow-hidden bg-card glow-ring">
+                <img
+                  src={profile}
+                  alt="Lolla Raj Venkata Apuroop"
+                  className="absolute inset-0 h-full w-full object-cover"
+                  loading="eager"
                 />
-                <div className="absolute -top-24 -left-24 h-64 w-64 rounded-full bg-primary/40 blur-3xl" />
-                <div className="absolute -bottom-24 -right-24 h-64 w-64 rounded-full bg-accent/40 blur-3xl" />
-
-                {/* Monogram */}
-                <div className="relative text-center px-6">
-                  <div className="text-[8rem] sm:text-[10rem] font-display font-bold leading-none text-gradient tracking-tighter">
-                    LR
-                  </div>
-                  <div className="mt-2 text-xs uppercase tracking-[0.4em] text-muted-foreground">
-                    Venkata Apuroop
-                  </div>
-                  <div className="mt-6 inline-flex items-center gap-2 rounded-full glass px-3 py-1.5 text-[11px] font-semibold">
-                    <span className="h-1.5 w-1.5 rounded-full bg-emerald-400 animate-pulse" />
-                    AI · Full Stack · UI/UX
-                  </div>
-                </div>
+                <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-background/10 to-transparent" />
               </div>
             </div>
             <div className="absolute -top-4 -right-2 glass rounded-2xl px-3 py-2 flex items-center gap-2 text-xs font-semibold animate-float">
@@ -233,40 +217,13 @@ function About() {
             <div className="absolute -inset-4 rounded-[2rem] bg-[image:var(--gradient-primary)] opacity-25 blur-2xl animate-pulse-glow" />
             <div className="relative glass rounded-[2rem] p-3 glow-ring overflow-hidden">
               <div className="relative rounded-3xl overflow-hidden aspect-[4/5] bg-card">
-                {/* Layered gradients */}
-                <div className="absolute inset-0 bg-[image:var(--gradient-hero)]" />
-                <div
-                  aria-hidden
-                  className="absolute inset-0 opacity-[0.08]"
-                  style={{
-                    backgroundImage:
-                      "linear-gradient(var(--foreground) 1px, transparent 1px), linear-gradient(90deg, var(--foreground) 1px, transparent 1px)",
-                    backgroundSize: "28px 28px",
-                  }}
+                <img
+                  src={profile}
+                  alt="Lolla Raj Venkata Apuroop portrait"
+                  className="absolute inset-0 h-full w-full object-cover"
+                  loading="lazy"
                 />
-                <div className="absolute -top-24 -left-24 h-72 w-72 rounded-full bg-primary/40 blur-3xl" />
-                <div className="absolute -bottom-24 -right-24 h-72 w-72 rounded-full bg-accent/40 blur-3xl" />
-
-                {/* Centerpiece */}
-                <div className="relative h-full w-full grid place-items-center px-6">
-                  <div className="text-center">
-                    <div className="text-[7rem] sm:text-[9rem] font-display font-bold leading-none text-gradient tracking-tighter">
-                      LR
-                    </div>
-                    <div className="mt-3 text-[11px] uppercase tracking-[0.4em] text-muted-foreground">
-                      Lolla Raj Venkata Apuroop
-                    </div>
-                    <div className="mt-6 flex flex-wrap justify-center gap-2">
-                      {["AI", "Full Stack", "UI/UX"].map((t) => (
-                        <span key={t} className="rounded-full glass px-3 py-1 text-[10px] font-semibold uppercase tracking-widest">
-                          {t}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
-                </div>
-
-                <div className="absolute inset-0 bg-gradient-to-t from-background/70 via-transparent to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-background/10 to-transparent" />
 
                 {/* Floating badges */}
                 <div className="absolute top-4 left-4 glass rounded-full px-3 py-1.5 text-[11px] font-semibold flex items-center gap-1.5 animate-float">
