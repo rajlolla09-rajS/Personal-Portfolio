@@ -90,7 +90,9 @@ function Hero() {
     <section id="home" className="relative pt-32 pb-24 lg:pt-40 lg:pb-32">
       <div className="mx-auto max-w-7xl px-6 grid gap-14 lg:grid-cols-[1.15fr_1fr] items-center">
         <div className="animate-fade-up">
-          <SectionLabel>Available for Internships</SectionLabel>
+          <div className="inline-flex items-center gap-2 rounded-full bg-[image:var(--gradient-primary)] px-4 py-1.5 text-xs font-bold tracking-wider text-primary-foreground shadow-[var(--shadow-glow)] animate-fade-up">
+            HIRE ME
+          </div>
           <h1 className="mt-6 text-4xl sm:text-5xl lg:text-6xl font-bold leading-[1.05]">
             Hello, I'm <br />
             <span className="text-gradient">Lolla Raj Venkata</span>
