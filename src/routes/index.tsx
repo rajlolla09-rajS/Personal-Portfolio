@@ -150,8 +150,8 @@ function Hero() {
 
         <div className="relative mx-auto lg:mx-0 lg:justify-self-end">
           <div className="relative">
-            <div className="absolute -inset-6 rounded-[2rem] bg-[image:var(--gradient-primary)] opacity-30 blur-2xl animate-pulse-glow" />
-            <div className="relative h-80 w-80 sm:h-[26rem] sm:w-[26rem] rounded-[2rem] p-[2px] bg-[image:var(--gradient-primary)] animate-float">
+            <div className="absolute -inset-6 rounded-[2rem] bg-[image:var(--gradient-primary)] opacity-30 blur-2xl" />
+            <div className="relative h-80 w-80 sm:h-[26rem] sm:w-[26rem] rounded-[2rem] p-[2px] bg-[image:var(--gradient-primary)]">
               <div className="relative h-full w-full rounded-[calc(2rem-2px)] overflow-hidden bg-card glow-ring">
                 <img
                   src={profile}
