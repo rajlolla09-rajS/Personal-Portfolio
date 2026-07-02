@@ -190,58 +190,172 @@ const stats = [
 ];
 
 function About() {
+  const highlights = [
+    { icon: Sparkles, title: "AI Undergraduate", desc: "B.Tech in CS (AI) at Pragati Engineering College" },
+    { icon: Code2, title: "Full Stack Focus", desc: "Building modern, responsive web experiences" },
+    { icon: Zap, title: "ML Explorer", desc: "Turning data into meaningful product moments" },
+    { icon: Target, title: "Problem Solver", desc: "DSA, hackathons, and shipping real solutions" },
+  ];
+
   return (
-    <section id="about" className="py-24">
+    <section id="about" className="py-24 relative">
       <div className="mx-auto max-w-7xl px-6">
         <div className="text-center">
           <SectionLabel>About Me</SectionLabel>
           <h2 className="section-heading mt-4">Know Me <span className="text-gradient">More</span></h2>
+          <p className="mt-4 text-muted-foreground max-w-xl mx-auto">
+            A quick snapshot of who I am, what I love building, and the numbers behind the journey.
+          </p>
         </div>
 
-        <div className="mt-14 grid gap-12 lg:grid-cols-2 items-center">
-          <div className="relative">
-            <div className="absolute -inset-3 rounded-3xl bg-[image:var(--gradient-primary)] opacity-20 blur-xl" />
-            <div className="relative rounded-3xl overflow-hidden glass p-2 glow-ring">
-              <img src={profile} alt="Portrait" className="rounded-2xl w-full aspect-square object-cover" loading="lazy" />
+        <div className="mt-16 grid gap-10 lg:grid-cols-[0.9fr_1.1fr] items-start">
+          {/* LEFT — Portrait card */}
+          <div className="relative lg:sticky lg:top-28">
+            <div className="absolute -inset-4 rounded-[2rem] bg-[image:var(--gradient-primary)] opacity-25 blur-2xl animate-pulse-glow" />
+            <div className="relative glass rounded-[2rem] p-3 glow-ring overflow-hidden">
+              <div className="relative rounded-3xl overflow-hidden">
+                <img
+                  src={profile}
+                  alt="Portrait"
+                  className="w-full aspect-[4/5] object-cover"
+                  loading="lazy"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-background via-background/40 to-transparent" />
+
+                {/* Floating badges */}
+                <div className="absolute top-4 left-4 glass rounded-full px-3 py-1.5 text-[11px] font-semibold flex items-center gap-1.5 animate-float">
+                  <span className="h-1.5 w-1.5 rounded-full bg-emerald-400 animate-pulse" />
+                  Available 2026
+                </div>
+                <div className="absolute top-4 right-4 glass rounded-full px-3 py-1.5 text-[11px] font-semibold text-gradient animate-float-slow">
+                  AI · B.Tech '28
+                </div>
+
+                {/* Bottom overlay card */}
+                <div className="absolute inset-x-4 bottom-4 glass rounded-2xl p-4 flex items-center gap-3">
+                  <div className="grid h-11 w-11 shrink-0 place-items-center rounded-xl bg-[image:var(--gradient-primary)] text-primary-foreground">
+                    <MapPin className="h-4 w-4" />
+                  </div>
+                  <div className="min-w-0">
+                    <div className="text-[10px] uppercase tracking-widest text-muted-foreground">Based in</div>
+                    <div className="text-sm font-semibold truncate">Andhra Pradesh, India</div>
+                  </div>
+                  <a
+                    href="#contact"
+                    className="ml-auto grid h-9 w-9 shrink-0 place-items-center rounded-xl bg-[image:var(--gradient-primary)] text-primary-foreground shadow-[var(--shadow-glow)] hover:scale-110 transition-transform"
+                    aria-label="Contact"
+                  >
+                    <ArrowRight className="h-4 w-4" />
+                  </a>
+                </div>
+              </div>
+
+              {/* Signature strip */}
+              <div className="flex items-center justify-between px-3 pt-3 pb-1 text-[10px] uppercase tracking-[0.25em] text-muted-foreground">
+                <span>Portfolio · '26</span>
+                <span className="text-gradient font-semibold">LRVA</span>
+              </div>
             </div>
           </div>
-          <div>
-            <h3 className="text-2xl font-display font-bold">Aspiring AI Engineer & Full Stack Developer</h3>
-            <p className="mt-4 text-muted-foreground leading-relaxed">
-              I'm an AI undergraduate who loves crafting modern web applications
-              and exploring machine learning. I enjoy solving challenging
-              programming problems and continuously learning new technologies,
-              always chasing that next opportunity to build something meaningful.
-            </p>
-            <ul className="mt-6 grid sm:grid-cols-2 gap-3 text-sm">
-              {[
-                "AI undergraduate student",
-                "Passionate about technology",
-                "Loves modern web apps",
-                "Interested in Machine Learning",
-                "Enjoys solving problems",
-                "Continuously learning",
-              ].map((t) => (
-                <li key={t} className="flex items-center gap-2">
-                  <span className="grid h-5 w-5 place-items-center rounded-full bg-primary/20 text-primary">
-                    <Star className="h-3 w-3" />
-                  </span>
-                  {t}
-                </li>
-              ))}
-            </ul>
 
-            <div className="mt-8 grid grid-cols-2 sm:grid-cols-5 gap-3">
-              {stats.map((s) => {
-                const Icon = s.icon;
+          {/* RIGHT — content */}
+          <div className="space-y-8">
+            <div>
+              <div className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.2em] text-primary">
+                <span className="h-px w-8 bg-primary" /> Hello there
+              </div>
+              <h3 className="mt-3 text-2xl sm:text-3xl font-display font-bold leading-tight">
+                Aspiring <span className="text-gradient">AI Engineer</span> &
+                <br className="hidden sm:block" /> Full Stack Developer
+              </h3>
+              <p className="mt-4 text-muted-foreground leading-relaxed">
+                I'm an AI undergraduate who loves crafting modern web applications
+                and exploring machine learning. I enjoy solving challenging
+                programming problems and continuously learning new technologies —
+                always chasing that next opportunity to build something meaningful.
+              </p>
+            </div>
+
+            {/* Highlight cards */}
+            <div className="grid gap-3 sm:grid-cols-2">
+              {highlights.map((h) => {
+                const Icon = h.icon;
                 return (
-                  <div key={s.label} className="glass rounded-2xl p-4 text-center hover:-translate-y-1 transition-transform">
-                    <Icon className="h-5 w-5 text-primary mx-auto" />
-                    <div className="mt-2 text-2xl font-display font-bold text-gradient">{s.value}</div>
-                    <div className="text-[10px] uppercase tracking-wider text-muted-foreground mt-1">{s.label}</div>
+                  <div
+                    key={h.title}
+                    className="group relative overflow-hidden glass rounded-2xl p-5 hover:-translate-y-1 hover:border-primary/60 transition-all"
+                  >
+                    <div className="absolute -right-6 -top-6 h-24 w-24 rounded-full bg-[image:var(--gradient-primary)] opacity-0 group-hover:opacity-20 blur-2xl transition-opacity" />
+                    <div className="relative flex items-start gap-3">
+                      <div className="grid h-10 w-10 shrink-0 place-items-center rounded-xl bg-primary/15 text-primary group-hover:bg-[image:var(--gradient-primary)] group-hover:text-primary-foreground transition-all">
+                        <Icon className="h-4 w-4" />
+                      </div>
+                      <div className="min-w-0">
+                        <h4 className="font-display font-semibold text-sm">{h.title}</h4>
+                        <p className="text-xs text-muted-foreground mt-1 leading-relaxed">{h.desc}</p>
+                      </div>
+                    </div>
                   </div>
                 );
               })}
+            </div>
+
+            {/* Stats — bento */}
+            <div>
+              <div className="flex items-baseline justify-between mb-4">
+                <h4 className="font-display font-bold text-lg">By the numbers</h4>
+                <span className="text-xs text-muted-foreground">Updated 2026</span>
+              </div>
+              <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
+                {stats.map((s, i) => {
+                  const Icon = s.icon;
+                  const featured = i === 0;
+                  return (
+                    <div
+                      key={s.label}
+                      className={`group relative overflow-hidden glass rounded-2xl p-5 hover:-translate-y-1 transition-all ${
+                        featured ? "sm:col-span-1 sm:row-span-2 bg-[image:var(--gradient-primary)]/10 border-primary/40" : ""
+                      }`}
+                    >
+                      <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity bg-gradient-to-br from-primary/10 to-accent/10" />
+                      <div className="relative">
+                        <div className="flex items-center justify-between">
+                          <Icon className="h-4 w-4 text-primary" />
+                          {featured && (
+                            <span className="text-[9px] uppercase tracking-widest text-primary font-bold">Featured</span>
+                          )}
+                        </div>
+                        <div className={`mt-3 font-display font-bold text-gradient ${featured ? "text-5xl" : "text-3xl"}`}>
+                          {s.value}
+                        </div>
+                        <div className="text-[10px] uppercase tracking-widest text-muted-foreground mt-1">
+                          {s.label}
+                        </div>
+                        {featured && (
+                          <p className="mt-3 text-xs text-muted-foreground leading-relaxed">
+                            Consistent academic performance across every semester so far.
+                          </p>
+                        )}
+                      </div>
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
+
+            <div className="flex flex-wrap gap-3 pt-2">
+              <a
+                href="#"
+                className="inline-flex items-center gap-2 rounded-xl bg-[image:var(--gradient-primary)] px-5 py-3 text-sm font-semibold text-primary-foreground shadow-[var(--shadow-glow)] hover:scale-[1.03] transition-transform"
+              >
+                <Download className="h-4 w-4" /> Download Resume
+              </a>
+              <a
+                href="#projects"
+                className="inline-flex items-center gap-2 rounded-xl border border-border glass px-5 py-3 text-sm font-semibold hover:border-primary/60"
+              >
+                See my work <ArrowRight className="h-4 w-4" />
+              </a>
             </div>
           </div>
         </div>
