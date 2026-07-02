@@ -162,8 +162,8 @@ function Hero() {
                 <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-background/10 to-transparent" />
               </div>
             </div>
-            <div className="absolute -top-4 -right-2 glass rounded-2xl px-3 py-2 flex items-center gap-2 text-xs font-semibold">
-              <span className="h-2 w-2 rounded-full bg-primary animate-pulse" />
+            <div className="absolute -top-4 -right-2 glass rounded-2xl px-3 py-2 flex items-center gap-2 text-xs font-semibold animate-float">
+              <span className="h-2 w-2 rounded-full bg-emerald-400 animate-pulse" />
               Hire Me
             </div>
             <div className="absolute -bottom-4 -left-4 glass rounded-2xl px-4 py-3 animate-float-slow">
