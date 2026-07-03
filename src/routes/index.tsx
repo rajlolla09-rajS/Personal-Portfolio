@@ -802,27 +802,31 @@ function Contact() {
 
           <form onSubmit={onSubmit} className="glass rounded-3xl p-8 space-y-4">
             <div className="grid gap-4 sm:grid-cols-2">
-              <Field label="Name" placeholder="Your name" />
-              <Field label="Email" type="email" placeholder="you@email.com" />
+              <Field label="Name" name="name" placeholder="Your name" />
+              <Field label="Email" name="email" type="email" placeholder="you@email.com" />
             </div>
-            <Field label="Subject" placeholder="How can I help?" />
+            <Field label="Subject" name="subject" placeholder="How can I help?" />
             <div>
               <label className="text-xs uppercase tracking-widest text-muted-foreground">Message</label>
               <textarea
                 required
+                name="message"
                 rows={5}
                 placeholder="Tell me about your idea..."
                 className="mt-2 w-full rounded-xl bg-input/60 border border-border px-4 py-3 text-sm focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/30 transition-all resize-none"
               />
             </div>
+            {error && <p className="text-xs text-destructive">{error}</p>}
             <button
               type="submit"
-              className="group w-full inline-flex items-center justify-center gap-2 rounded-xl bg-[image:var(--gradient-primary)] px-5 py-3.5 text-sm font-semibold text-primary-foreground shadow-[var(--shadow-glow)] hover:scale-[1.01] transition-transform"
+              disabled={sending}
+              className="group w-full inline-flex items-center justify-center gap-2 rounded-xl bg-[image:var(--gradient-primary)] px-5 py-3.5 text-sm font-semibold text-primary-foreground shadow-[var(--shadow-glow)] hover:scale-[1.01] transition-transform disabled:opacity-70"
             >
-              {sent ? "Message sent!" : "Send Message"}
+              {sent ? "Message sent!" : sending ? "Sending..." : "Send Message"}
               <Send className="h-4 w-4 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
             </button>
           </form>
+
         </div>
       </div>
     </section>
