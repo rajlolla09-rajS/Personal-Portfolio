@@ -25,6 +25,7 @@ import {
   Zap,
 } from "lucide-react";
 import { useState, type FormEvent } from "react";
+import { toast } from "sonner";
 import { Nav } from "@/components/portfolio/Nav";
 import { Typewriter } from "@/components/portfolio/Typewriter";
 import profileAsset from "@/assets/profile.png.asset.json";
@@ -758,7 +759,19 @@ function Contact() {
       form.reset();
       setTimeout(() => setSent(false), 3000);
     } catch (err) {
-      setError("Failed to send. Please try again.");
+      const emailjsErr = err as { status?: number; text?: string; message?: string };
+      const status = emailjsErr.status ?? "?";
+      const reason = emailjsErr.text || (err instanceof Error ? err.message : "Unknown error");
+      console.error("[EmailJS] Send failed:", {
+        status,
+        reason,
+        serviceId: "service_q712v3g",
+        templateId: "template_zuwn717",
+        publicKey: "F9LFC3eT8Ntasrneq",
+      });
+      const detail = `EmailJS error (${status}): ${reason}`;
+      setError(detail);
+      toast.error("Failed to send message", { description: detail });
     } finally {
       setSending(false);
     }
