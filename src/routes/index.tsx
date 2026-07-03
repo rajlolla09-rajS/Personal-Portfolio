@@ -15,7 +15,7 @@ import {
   Mail,
   MapPin,
   Palette,
-  Phone,
+  
   Send,
   Sparkles,
   Star,
