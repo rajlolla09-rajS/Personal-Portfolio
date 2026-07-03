@@ -851,7 +851,7 @@ function Footer() {
           <div className="mt-4 flex gap-3">
             {[
               { icon: Github, href: "https://github.com/rajlolla09-rajS" },
-              { icon: Linkedin, href: "#" },
+              { icon: Linkedin, href: "https://www.linkedin.com/in/raj-venkata-apuroop-lolla-30410532b" },
               { icon: Mail, href: "#contact" },
             ].map(({ icon: Icon, href }, i) => (
               <a key={i} href={href} target="_blank" rel="noreferrer" className="grid h-10 w-10 place-items-center rounded-xl glass hover:bg-[image:var(--gradient-primary)] hover:text-primary-foreground transition-all">
