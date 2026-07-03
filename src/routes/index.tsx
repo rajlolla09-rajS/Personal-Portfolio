@@ -747,28 +747,30 @@ function Contact() {
     const form = e.currentTarget;
     setError(null);
     setSending(true);
+    const SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID as string | undefined;
+    const TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID as string | undefined;
+    const PUBLIC_KEY = import.meta.env.VITE_EMAILJS_PUBLIC_KEY as string | undefined;
+    if (!SERVICE_ID || !TEMPLATE_ID || !PUBLIC_KEY) {
+      const detail =
+        "Email service is not configured. Missing VITE_EMAILJS_SERVICE_ID, VITE_EMAILJS_TEMPLATE_ID, or VITE_EMAILJS_PUBLIC_KEY.";
+      console.error("[EmailJS]", detail);
+      setError(detail);
+      toast.error("Failed to send message", { description: detail });
+      setSending(false);
+      return;
+    }
     try {
       const emailjs = (await import("@emailjs/browser")).default;
-      await emailjs.sendForm(
-        "service_q712v3g",
-        "template_zuwn717",
-        form,
-        { publicKey: "F9LFC3eT8Ntasrneq" },
-      );
+      await emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, form, { publicKey: PUBLIC_KEY });
       setSent(true);
       form.reset();
+      toast.success("Message sent!", { description: "Thanks — I'll get back to you soon." });
       setTimeout(() => setSent(false), 3000);
     } catch (err) {
       const emailjsErr = err as { status?: number; text?: string; message?: string };
       const status = emailjsErr.status ?? "?";
       const reason = emailjsErr.text || (err instanceof Error ? err.message : "Unknown error");
-      console.error("[EmailJS] Send failed:", {
-        status,
-        reason,
-        serviceId: "service_q712v3g",
-        templateId: "template_zuwn717",
-        publicKey: "F9LFC3eT8Ntasrneq",
-      });
+      console.error("[EmailJS] Send failed:", { status, reason });
       const detail = `EmailJS error (${status}): ${reason}`;
       setError(detail);
       toast.error("Failed to send message", { description: detail });
@@ -776,6 +778,7 @@ function Contact() {
       setSending(false);
     }
   };
+
 
   const details = [
     { icon: Mail, label: "Email", value: "rajlolla09@gmail.com" },
