@@ -143,7 +143,7 @@ function Hero() {
             <a href="https://github.com/rajlolla09-rajS" target="_blank" rel="noreferrer" className="hover:text-foreground transition-colors flex items-center gap-2">
               <Github className="h-4 w-4" /> GitHub
             </a>
-            <a href="#" className="hover:text-foreground transition-colors flex items-center gap-2">
+            <a href="https://www.linkedin.com/in/raj-venkata-apuroop-lolla-30410532b" target="_blank" rel="noreferrer" className="hover:text-foreground transition-colors flex items-center gap-2">
               <Linkedin className="h-4 w-4" /> LinkedIn
             </a>
             <span className="flex items-center gap-2"><MapPin className="h-4 w-4" /> Andhra Pradesh, IN</span>
@@ -746,10 +746,10 @@ function Contact() {
   };
 
   const details = [
-    { icon: Mail, label: "Email", value: "yourname@email.com" },
-    { icon: Phone, label: "Phone", value: "+91 XXXXX XXXXX" },
+    { icon: Mail, label: "Email", value: "rajlolla09@gmail.com" },
+    { icon: Phone, label: "Phone", value: "7995648282" },
     { icon: Github, label: "GitHub", value: "github.com/rajlolla09-rajS" },
-    { icon: Linkedin, label: "LinkedIn", value: "linkedin.com/in/yourusername" },
+    { icon: Linkedin, label: "LinkedIn", value: "linkedin.com/in/raj-venkata-apuroop-lolla-30410532b" },
     { icon: MapPin, label: "Location", value: "Andhra Pradesh, India" },
   ];
 
@@ -851,7 +851,7 @@ function Footer() {
           <div className="mt-4 flex gap-3">
             {[
               { icon: Github, href: "https://github.com/rajlolla09-rajS" },
-              { icon: Linkedin, href: "#" },
+              { icon: Linkedin, href: "https://www.linkedin.com/in/raj-venkata-apuroop-lolla-30410532b" },
               { icon: Mail, href: "#contact" },
             ].map(({ icon: Icon, href }, i) => (
               <a key={i} href={href} target="_blank" rel="noreferrer" className="grid h-10 w-10 place-items-center rounded-xl glass hover:bg-[image:var(--gradient-primary)] hover:text-primary-foreground transition-all">
