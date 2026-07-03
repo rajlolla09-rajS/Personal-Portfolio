@@ -25,6 +25,7 @@ import {
   Zap,
 } from "lucide-react";
 import { useState, type FormEvent } from "react";
+import { toast } from "sonner";
 import { Nav } from "@/components/portfolio/Nav";
 import { Typewriter } from "@/components/portfolio/Typewriter";
 import profileAsset from "@/assets/profile.png.asset.json";
