@@ -739,10 +739,29 @@ function Achievements() {
 /* ---------------- CONTACT ---------------- */
 function Contact() {
   const [sent, setSent] = useState(false);
-  const onSubmit = (e: FormEvent) => {
+  const [sending, setSending] = useState(false);
+  const [error, setError] = useState<string | null>(null);
+  const onSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    setSent(true);
-    setTimeout(() => setSent(false), 3000);
+    const form = e.currentTarget;
+    setError(null);
+    setSending(true);
+    try {
+      const emailjs = (await import("@emailjs/browser")).default;
+      await emailjs.sendForm(
+        "service_q712v3g",
+        "template_zuwn717",
+        form,
+        { publicKey: "F9LFC3eT8Ntasrneq" },
+      );
+      setSent(true);
+      form.reset();
+      setTimeout(() => setSent(false), 3000);
+    } catch (err) {
+      setError("Failed to send. Please try again.");
+    } finally {
+      setSending(false);
+    }
   };
 
   const details = [
