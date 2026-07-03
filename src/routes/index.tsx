@@ -147,7 +147,7 @@ function Hero() {
             <a href="https://www.linkedin.com/in/raj-venkata-apuroop-lolla-30410532b" target="_blank" rel="noreferrer" className="hover:text-foreground transition-colors flex items-center gap-2">
               <Linkedin className="h-4 w-4" /> LinkedIn
             </a>
-            <span className="flex items-center gap-2"><MapPin className="h-4 w-4" /> Andhra Pradesh, IN</span>
+            <span className="flex items-center gap-2"><MapPin className="h-4 w-4" /> Kakinada, Andhra Pradesh</span>
           </div>
         </div>
 
@@ -235,7 +235,7 @@ function About() {
                   </div>
                   <div className="min-w-0">
                     <div className="text-[10px] uppercase tracking-widest text-muted-foreground">Based in</div>
-                    <div className="text-sm font-semibold truncate">Andhra Pradesh, India</div>
+                    <div className="text-sm font-semibold truncate">Kakinada, Andhra Pradesh</div>
                   </div>
                   <a
                     href="#contact"
@@ -775,7 +775,7 @@ function Contact() {
     { icon: Mail, label: "Email", value: "rajlolla09@gmail.com" },
     { icon: Github, label: "GitHub", value: "github.com/rajlolla09-rajS" },
     { icon: Linkedin, label: "LinkedIn", value: "linkedin.com/in/raj-venkata-apuroop-lolla-30410532b" },
-    { icon: MapPin, label: "Location", value: "Andhra Pradesh, India" },
+    { icon: MapPin, label: "Location", value: "Kakinada, Andhra Pradesh" },
   ];
 
   return (
