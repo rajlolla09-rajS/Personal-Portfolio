@@ -229,10 +229,6 @@ function About() {
                 <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-background/10 to-transparent" />
 
                 {/* Floating badges */}
-                <div className="absolute top-4 left-4 glass rounded-full px-3 py-1.5 text-[11px] font-semibold flex items-center gap-1.5 animate-float">
-                  <span className="h-1.5 w-1.5 rounded-full bg-emerald-400 animate-pulse" />
-                  Available 2026
-                </div>
                 <div className="absolute top-4 right-4 glass rounded-full px-3 py-1.5 text-[11px] font-semibold text-gradient animate-float-slow">
                   AI · B.Tech '28
                 </div>
