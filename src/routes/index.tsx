@@ -692,7 +692,9 @@ function Projects() {
 /* ---------------- ACHIEVEMENTS ---------------- */
 const achievements = [
   { title: "FORGE INSPIRE'25", desc: "NIT Hackathon Participant", icon: Trophy },
-  { title: "Multiple Internships", desc: "Thiranex • YUVA • APSCHE", icon: Briefcase },
+  { title: "Thiranex Internship", desc: "Hands-on technical learning & software development", icon: Briefcase },
+  { title: "YUVA Internship", desc: "Industry exposure through project-based learning", icon: Briefcase },
+  { title: "Power BI Internship", desc: "Data visualization & dashboards at APSCHE", icon: Briefcase },
   { title: "AI Student", desc: "Actively exploring ML & AI", icon: Sparkles },
   { title: "ML Projects", desc: "Stock prediction & more", icon: Target },
   { title: "Full Stack Learning", desc: "Modern web development", icon: Layers },
