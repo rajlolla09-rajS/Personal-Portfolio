@@ -801,9 +801,11 @@ function Contact() {
           </div>
 
           <form onSubmit={onSubmit} className="glass rounded-3xl p-8 space-y-4">
+            {/* Route the email to my inbox; sender's email is used as reply-to via the form field below */}
+            <input type="hidden" name="to_email" value="rajlolla09@gmail.com" />
             <div className="grid gap-4 sm:grid-cols-2">
               <Field label="Name" name="name" placeholder="Your name" />
-              <Field label="Email" name="email" type="email" placeholder="you@email.com" />
+              <Field label="Email" name="reply_to" type="email" placeholder="you@email.com" />
             </div>
             <Field label="Subject" name="subject" placeholder="How can I help?" />
             <div>
