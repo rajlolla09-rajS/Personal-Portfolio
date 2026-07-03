@@ -143,7 +143,7 @@ function Hero() {
             <a href="https://github.com/rajlolla09-rajS" target="_blank" rel="noreferrer" className="hover:text-foreground transition-colors flex items-center gap-2">
               <Github className="h-4 w-4" /> GitHub
             </a>
-            <a href="#" className="hover:text-foreground transition-colors flex items-center gap-2">
+            <a href="https://www.linkedin.com/in/raj-venkata-apuroop-lolla-30410532b" target="_blank" rel="noreferrer" className="hover:text-foreground transition-colors flex items-center gap-2">
               <Linkedin className="h-4 w-4" /> LinkedIn
             </a>
             <span className="flex items-center gap-2"><MapPin className="h-4 w-4" /> Andhra Pradesh, IN</span>
