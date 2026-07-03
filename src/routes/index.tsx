@@ -228,11 +228,6 @@ function About() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-background/10 to-transparent" />
 
-                {/* Floating badges */}
-                <div className="absolute top-4 right-4 glass rounded-full px-3 py-1.5 text-[11px] font-semibold text-gradient animate-float-slow">
-                  AI · B.Tech '28
-                </div>
-
                 {/* Bottom overlay card */}
                 <div className="absolute inset-x-4 bottom-4 glass rounded-2xl p-4 flex items-center gap-3">
                   <div className="grid h-11 w-11 shrink-0 place-items-center rounded-xl bg-[image:var(--gradient-primary)] text-primary-foreground">
