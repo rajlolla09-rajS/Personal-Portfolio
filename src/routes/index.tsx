@@ -15,7 +15,7 @@ import {
   Mail,
   MapPin,
   Palette,
-  Phone,
+  
   Send,
   Sparkles,
   Star,
@@ -747,7 +747,6 @@ function Contact() {
 
   const details = [
     { icon: Mail, label: "Email", value: "rajlolla09@gmail.com" },
-    { icon: Phone, label: "Phone", value: "7995648282" },
     { icon: Github, label: "GitHub", value: "github.com/rajlolla09-rajS" },
     { icon: Linkedin, label: "LinkedIn", value: "linkedin.com/in/raj-venkata-apuroop-lolla-30410532b" },
     { icon: MapPin, label: "Location", value: "Andhra Pradesh, India" },
