@@ -749,10 +749,10 @@ function Contact() {
     try {
       const emailjs = (await import("@emailjs/browser")).default;
       await emailjs.sendForm(
-        "service_xkc2c0x",
-        "template_54awx9w",
+        "service_q712v3g",
+        "template_zuwn717",
         form,
-        { publicKey: "G9kW1a6wqkPj-ixPI" },
+        { publicKey: "F9LFC3eT8Ntasrneq" },
       );
       setSent(true);
       form.reset();
