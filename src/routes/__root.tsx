@@ -93,6 +93,12 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "Lolla Raj Venkata Apuroop — AI & Full Stack Developer" },
+      { name: "description", content: "Portfolio of Lolla Raj Venkata Apuroop — B.Tech AI student, Full Stack Developer, and UI/UX designer building scalable, user-focused digital solutions." },
+      { property: "og:description", content: "Portfolio of Lolla Raj Venkata Apuroop — B.Tech AI student, Full Stack Developer, and UI/UX designer building scalable, user-focused digital solutions." },
+      { name: "twitter:description", content: "Portfolio of Lolla Raj Venkata Apuroop — B.Tech AI student, Full Stack Developer, and UI/UX designer building scalable, user-focused digital solutions." },
+      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/daff35e8-7b30-4d7d-b78c-bc3685f8d9c9/id-preview-b4cf7570--9c4640da-b947-4b3c-a74f-8475c97091ce.lovable.app-1783166811303.png" },
+      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/daff35e8-7b30-4d7d-b78c-bc3685f8d9c9/id-preview-b4cf7570--9c4640da-b947-4b3c-a74f-8475c97091ce.lovable.app-1783166811303.png" },
     ],
     links: [
       { rel: "stylesheet", href: appCss },
