@@ -119,7 +119,7 @@ function Hero() {
 
           <div className="mt-8 flex flex-wrap gap-3">
             <a
-              href="https://drive.google.com/uc?export=download&id=1MLLXZpIzMuF9_FOYLXwI_68ZBKIHlhtW"
+                href="https://drive.google.com/file/d/1MLLXZpIzMuF9_FOYLXwI_68ZBKIHlhtW/view"
               target="_blank"
               rel="noreferrer"
               className="group inline-flex items-center gap-2 rounded-xl bg-[image:var(--gradient-primary)] px-5 py-3 text-sm font-semibold text-primary-foreground shadow-[var(--shadow-glow)] transition-transform hover:scale-[1.03]"
@@ -343,7 +343,7 @@ function About() {
 
             <div className="flex flex-wrap gap-3 pt-2">
               <a
-                href="https://drive.google.com/uc?export=download&id=1MLLXZpIzMuF9_FOYLXwI_68ZBKIHlhtW"
+                href="https://drive.google.com/file/d/1MLLXZpIzMuF9_FOYLXwI_68ZBKIHlhtW/view"
                 target="_blank"
                 rel="noreferrer"
                 className="inline-flex items-center gap-2 rounded-xl bg-[image:var(--gradient-primary)] px-5 py-3 text-sm font-semibold text-primary-foreground shadow-[var(--shadow-glow)] hover:scale-[1.03] transition-transform"
