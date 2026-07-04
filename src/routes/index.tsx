@@ -373,7 +373,7 @@ const education = [
     title: "Intermediate — MPC",
     place: "Aditya Junior College",
     period: "2022 – 2024",
-    detail: "950 Marks",
+    detail: "Percentage: 95%",
     icon: BookOpen,
   },
   {
