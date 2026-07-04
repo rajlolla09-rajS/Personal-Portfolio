@@ -14,7 +14,7 @@ import {
   Linkedin,
   Mail,
   MapPin,
-  Palette,
+  
   
   Send,
   Sparkles,
