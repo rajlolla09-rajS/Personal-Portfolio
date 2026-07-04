@@ -188,8 +188,8 @@ function Hero() {
 /* ---------------- ABOUT ---------------- */
 const stats = [
   { label: "CGPA", value: "8.3", icon: GraduationCap },
-  { label: "Projects", value: "7+", icon: Layers },
-  { label: "Certifications", value: "9+", icon: Award },
+  { label: "Projects", value: "5+", icon: Layers },
+  { label: "Certifications", value: "30+", icon: Award },
   { label: "Hackathon Accuracy", value: "79%", icon: Target },
   { label: "Technologies", value: "10+", icon: Code2 },
 ];
@@ -373,7 +373,7 @@ const education = [
     title: "Intermediate — MPC",
     place: "Aditya Junior College",
     period: "2022 – 2024",
-    detail: "950 Marks",
+    detail: "Percentage: 95%",
     icon: BookOpen,
   },
   {
@@ -692,7 +692,7 @@ const achievements = [
   { title: "AI Student", desc: "Actively exploring ML & AI", icon: Sparkles },
   { title: "ML Projects", desc: "Stock prediction & more", icon: Target },
   { title: "Full Stack Learning", desc: "Modern web development", icon: Layers },
-  { title: "9+ Certifications", desc: "Continuous upskilling", icon: Award },
+  { title: "30+ Certifications", desc: "Continuous upskilling", icon: Award },
 ];
 
 function Achievements() {
