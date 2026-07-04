@@ -692,7 +692,7 @@ const achievements = [
   { title: "AI Student", desc: "Actively exploring ML & AI", icon: Sparkles },
   { title: "ML Projects", desc: "Stock prediction & more", icon: Target },
   { title: "Full Stack Learning", desc: "Modern web development", icon: Layers },
-  { title: "9+ Certifications", desc: "Continuous upskilling", icon: Award },
+  { title: "30+ Certifications", desc: "Continuous upskilling", icon: Award },
 ];
 
 function Achievements() {
