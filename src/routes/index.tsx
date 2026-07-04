@@ -188,7 +188,7 @@ function Hero() {
 /* ---------------- ABOUT ---------------- */
 const stats = [
   { label: "CGPA", value: "8.3", icon: GraduationCap },
-  { label: "Projects", value: "7+", icon: Layers },
+  { label: "Projects", value: "5+", icon: Layers },
   { label: "Certifications", value: "9+", icon: Award },
   { label: "Hackathon Accuracy", value: "79%", icon: Target },
   { label: "Technologies", value: "10+", icon: Code2 },
