@@ -105,7 +105,6 @@ function Hero() {
               words={[
                 "AI Enthusiast",
                 "Full Stack Developer",
-                "UI/UX Designer",
                 "Problem Solver",
                 "Tech Explorer",
               ]}
@@ -508,11 +507,6 @@ function Skills() {
 
 /* ---------------- SERVICES ---------------- */
 const services = [
-  {
-    icon: Palette,
-    title: "UI/UX Design",
-    desc: "Clean, responsive, intuitive user interfaces with modern user experiences that feel effortless.",
-  },
   {
     icon: Code2,
     title: "Full Stack Development",
