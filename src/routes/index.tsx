@@ -14,8 +14,6 @@ import {
   Linkedin,
   Mail,
   MapPin,
-  
-  
   Send,
   Sparkles,
   Star,
@@ -28,10 +26,7 @@ import { useState, type FormEvent } from "react";
 import { toast } from "sonner";
 import { Nav } from "@/components/portfolio/Nav";
 import { Typewriter } from "@/components/portfolio/Typewriter";
-import profileAsset from "@/assets/profile.png.asset.json";
-
-const profile = profileAsset.url;
-
+import profile from "@/assets/profile.png";
 
 export const Route = createFileRoute("/")({
   component: Index,
@@ -101,25 +96,17 @@ function Hero() {
             Apuroop
           </h1>
           <p className="mt-5 text-lg text-muted-foreground">
-            <Typewriter
-              words={[
-                "AI Enthusiast",
-                "Full Stack Developer",
-                "Problem Solver",
-                "Tech Explorer",
-              ]}
-            />
+            <Typewriter words={["AI Enthusiast", "Full Stack Developer", "Problem Solver", "Tech Explorer"]} />
           </p>
           <p className="mt-6 max-w-xl text-base leading-relaxed text-muted-foreground">
-            I'm a B.Tech Artificial Intelligence student passionate about web
-            development, AI, and problem solving. I design and build scalable,
-            user-focused digital solutions while continuously sharpening my
-            skills through projects, internships, and hands-on learning.
+            I'm a B.Tech Artificial Intelligence student passionate about web development, AI, and problem solving. I
+            design and build scalable, user-focused digital solutions while continuously sharpening my skills through
+            projects, internships, and hands-on learning.
           </p>
 
           <div className="mt-8 flex flex-wrap gap-3">
             <a
-                href="https://drive.google.com/file/d/1ztsfvNE97nDlXhCStO8zYKcoaqY7_EBn/view"
+              href="https://drive.google.com/file/d/1ztsfvNE97nDlXhCStO8zYKcoaqY7_EBn/view"
               target="_blank"
               rel="noreferrer"
               className="group inline-flex items-center gap-2 rounded-xl bg-[image:var(--gradient-primary)] px-5 py-3 text-sm font-semibold text-primary-foreground shadow-[var(--shadow-glow)] transition-transform hover:scale-[1.03]"
@@ -142,13 +129,25 @@ function Hero() {
           </div>
 
           <div className="mt-10 flex items-center gap-6 text-sm text-muted-foreground">
-            <a href="https://github.com/rajlolla09-rajS" target="_blank" rel="noreferrer" className="hover:text-foreground transition-colors flex items-center gap-2">
+            <a
+              href="https://github.com/rajlolla09-rajS"
+              target="_blank"
+              rel="noreferrer"
+              className="hover:text-foreground transition-colors flex items-center gap-2"
+            >
               <Github className="h-4 w-4" /> GitHub
             </a>
-            <a href="https://www.linkedin.com/in/raj-venkata-apuroop-lolla-30410532b" target="_blank" rel="noreferrer" className="hover:text-foreground transition-colors flex items-center gap-2">
+            <a
+              href="https://www.linkedin.com/in/raj-venkata-apuroop-lolla-30410532b"
+              target="_blank"
+              rel="noreferrer"
+              className="hover:text-foreground transition-colors flex items-center gap-2"
+            >
               <Linkedin className="h-4 w-4" /> LinkedIn
             </a>
-            <span className="flex items-center gap-2"><MapPin className="h-4 w-4" /> Kakinada, Andhra Pradesh</span>
+            <span className="flex items-center gap-2">
+              <MapPin className="h-4 w-4" /> Kakinada, Andhra Pradesh
+            </span>
           </div>
         </div>
 
@@ -209,7 +208,9 @@ function About() {
       <div className="mx-auto max-w-7xl px-6">
         <div className="text-center">
           <SectionLabel>About Me</SectionLabel>
-          <h2 className="section-heading mt-4">Know Me <span className="text-gradient">More</span></h2>
+          <h2 className="section-heading mt-4">
+            Know Me <span className="text-gradient">More</span>
+          </h2>
           <p className="mt-4 text-muted-foreground max-w-xl mx-auto">
             A quick snapshot of who I am, what I love building, and the numbers behind the journey.
           </p>
@@ -267,10 +268,9 @@ function About() {
                 <br className="hidden sm:block" /> Full Stack Developer
               </h3>
               <p className="mt-4 text-muted-foreground leading-relaxed">
-                I'm an AI undergraduate who loves crafting modern web applications
-                and exploring machine learning. I enjoy solving challenging
-                programming problems and continuously learning new technologies —
-                always chasing that next opportunity to build something meaningful.
+                I'm an AI undergraduate who loves crafting modern web applications and exploring machine learning. I
+                enjoy solving challenging programming problems and continuously learning new technologies — always
+                chasing that next opportunity to build something meaningful.
               </p>
             </div>
 
@@ -312,7 +312,9 @@ function About() {
                     <div
                       key={s.label}
                       className={`group relative overflow-hidden glass rounded-2xl p-5 hover:-translate-y-1 transition-all ${
-                        featured ? "sm:col-span-1 sm:row-span-2 bg-[image:var(--gradient-primary)]/10 border-primary/40" : ""
+                        featured
+                          ? "sm:col-span-1 sm:row-span-2 bg-[image:var(--gradient-primary)]/10 border-primary/40"
+                          : ""
                       }`}
                     >
                       <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity bg-gradient-to-br from-primary/10 to-accent/10" />
@@ -320,10 +322,14 @@ function About() {
                         <div className="flex items-center justify-between">
                           <Icon className="h-4 w-4 text-primary" />
                           {featured && (
-                            <span className="text-[9px] uppercase tracking-widest text-primary font-bold">Featured</span>
+                            <span className="text-[9px] uppercase tracking-widest text-primary font-bold">
+                              Featured
+                            </span>
                           )}
                         </div>
-                        <div className={`mt-3 font-display font-bold text-gradient ${featured ? "text-5xl" : "text-3xl"}`}>
+                        <div
+                          className={`mt-3 font-display font-bold text-gradient ${featured ? "text-5xl" : "text-3xl"}`}
+                        >
                           {s.value}
                         </div>
                         <div className="text-[10px] uppercase tracking-widest text-muted-foreground mt-1">
@@ -395,7 +401,9 @@ function Education() {
       <div className="mx-auto max-w-5xl px-6">
         <div className="text-center">
           <SectionLabel>Education</SectionLabel>
-          <h2 className="section-heading mt-4">My <span className="text-gradient">Journey</span></h2>
+          <h2 className="section-heading mt-4">
+            My <span className="text-gradient">Journey</span>
+          </h2>
         </div>
 
         <div className="relative mt-16">
@@ -406,12 +414,16 @@ function Education() {
               const left = i % 2 === 0;
               return (
                 <div key={e.title} className="relative md:grid md:grid-cols-2 md:gap-10 items-center">
-                  <div className={`pl-14 md:pl-0 ${left ? "md:pr-10 md:text-right md:col-start-1" : "md:pl-10 md:col-start-2"}`}>
+                  <div
+                    className={`pl-14 md:pl-0 ${left ? "md:pr-10 md:text-right md:col-start-1" : "md:pl-10 md:col-start-2"}`}
+                  >
                     <div className="glass rounded-2xl p-6 hover:border-primary/50 transition-all hover:-translate-y-1">
                       <div className="text-xs uppercase tracking-widest text-primary font-semibold">{e.period}</div>
                       <h3 className="mt-2 text-lg font-display font-bold">{e.title}</h3>
                       <p className="text-muted-foreground text-sm mt-1">{e.place}</p>
-                      <p className="mt-3 inline-flex items-center gap-2 text-sm font-semibold text-gradient">{e.detail}</p>
+                      <p className="mt-3 inline-flex items-center gap-2 text-sm font-semibold text-gradient">
+                        {e.detail}
+                      </p>
                     </div>
                   </div>
                   <div className="absolute left-4 md:left-1/2 top-6 md:top-1/2 md:-translate-y-1/2 -translate-x-1/2 grid h-9 w-9 place-items-center rounded-full bg-[image:var(--gradient-primary)] shadow-[var(--shadow-glow)]">
@@ -470,7 +482,9 @@ function Skills() {
       <div className="mx-auto max-w-7xl px-6">
         <div className="text-center">
           <SectionLabel>Skills</SectionLabel>
-          <h2 className="section-heading mt-4">Tools of My <span className="text-gradient">Craft</span></h2>
+          <h2 className="section-heading mt-4">
+            Tools of My <span className="text-gradient">Craft</span>
+          </h2>
         </div>
 
         <div className="mt-14 grid gap-6 md:grid-cols-2">
@@ -529,7 +543,9 @@ function Services() {
       <div className="mx-auto max-w-7xl px-6">
         <div className="text-center">
           <SectionLabel>What I Do</SectionLabel>
-          <h2 className="section-heading mt-4">Services I <span className="text-gradient">Provide</span></h2>
+          <h2 className="section-heading mt-4">
+            Services I <span className="text-gradient">Provide</span>
+          </h2>
         </div>
         <div className="mt-14 grid gap-6 md:grid-cols-3">
           {services.map((s) => {
@@ -589,11 +605,16 @@ function Experience() {
       <div className="mx-auto max-w-7xl px-6">
         <div className="text-center">
           <SectionLabel>Internship Experience</SectionLabel>
-          <h2 className="section-heading mt-4">Where I've <span className="text-gradient">Grown</span></h2>
+          <h2 className="section-heading mt-4">
+            Where I've <span className="text-gradient">Grown</span>
+          </h2>
         </div>
         <div className="mt-14 grid gap-6 md:grid-cols-2">
           {experiences.map((e) => (
-            <div key={e.role} className="glass rounded-2xl p-6 hover:border-primary/60 transition-all hover:-translate-y-1 group">
+            <div
+              key={e.role}
+              className="glass rounded-2xl p-6 hover:border-primary/60 transition-all hover:-translate-y-1 group"
+            >
               <div className="flex items-start gap-4">
                 <div className="grid h-11 w-11 shrink-0 place-items-center rounded-xl bg-primary/15 text-primary group-hover:bg-[image:var(--gradient-primary)] group-hover:text-primary-foreground transition-all">
                   <Briefcase className="h-5 w-5" />
@@ -638,21 +659,33 @@ function Projects() {
       <div className="mx-auto max-w-7xl px-6">
         <div className="text-center">
           <SectionLabel>Featured Projects</SectionLabel>
-          <h2 className="section-heading mt-4">Selected <span className="text-gradient">Work</span></h2>
+          <h2 className="section-heading mt-4">
+            Selected <span className="text-gradient">Work</span>
+          </h2>
         </div>
         <div className="mt-14 grid gap-8 lg:grid-cols-2">
           {projects.map((p) => (
-            <article key={p.title} className="group relative glass rounded-3xl overflow-hidden hover:-translate-y-2 transition-all duration-500">
+            <article
+              key={p.title}
+              className="group relative glass rounded-3xl overflow-hidden hover:-translate-y-2 transition-all duration-500"
+            >
               <div className={`relative h-52 bg-gradient-to-br ${p.accent} overflow-hidden`}>
-                <div className="absolute inset-0 opacity-30" style={{
-                  backgroundImage: "radial-gradient(circle at 20% 30%, rgba(255,255,255,.4), transparent 40%), radial-gradient(circle at 80% 70%, rgba(0,0,0,.3), transparent 40%)"
-                }} />
+                <div
+                  className="absolute inset-0 opacity-30"
+                  style={{
+                    backgroundImage:
+                      "radial-gradient(circle at 20% 30%, rgba(255,255,255,.4), transparent 40%), radial-gradient(circle at 80% 70%, rgba(0,0,0,.3), transparent 40%)",
+                  }}
+                />
                 <div className="absolute inset-0 grid place-items-center">
                   <Code2 className="h-20 w-20 text-white/80 group-hover:scale-110 transition-transform duration-500" />
                 </div>
                 <div className="absolute top-4 left-4 flex flex-wrap gap-2">
                   {p.tech.map((t) => (
-                    <span key={t} className="text-[10px] font-semibold uppercase tracking-wider px-2.5 py-1 rounded-full bg-black/40 backdrop-blur-sm text-white">
+                    <span
+                      key={t}
+                      className="text-[10px] font-semibold uppercase tracking-wider px-2.5 py-1 rounded-full bg-black/40 backdrop-blur-sm text-white"
+                    >
                       {t}
                     </span>
                   ))}
@@ -671,10 +704,18 @@ function Projects() {
                   </ul>
                 )}
                 <div className="mt-6 flex gap-3">
-                  <a href={p.github} target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 rounded-xl bg-secondary hover:bg-secondary/70 px-4 py-2 text-sm font-semibold transition-colors">
+                  <a
+                    href={p.github}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="inline-flex items-center gap-2 rounded-xl bg-secondary hover:bg-secondary/70 px-4 py-2 text-sm font-semibold transition-colors"
+                  >
                     <Github className="h-4 w-4" /> GitHub
                   </a>
-                  <a href="#" className="inline-flex items-center gap-2 rounded-xl bg-[image:var(--gradient-primary)] px-4 py-2 text-sm font-semibold text-primary-foreground shadow-[var(--shadow-glow)]">
+                  <a
+                    href="#"
+                    className="inline-flex items-center gap-2 rounded-xl bg-[image:var(--gradient-primary)] px-4 py-2 text-sm font-semibold text-primary-foreground shadow-[var(--shadow-glow)]"
+                  >
                     <ExternalLink className="h-4 w-4" /> Live Demo
                   </a>
                 </div>
@@ -705,13 +746,18 @@ function Achievements() {
       <div className="mx-auto max-w-7xl px-6">
         <div className="text-center">
           <SectionLabel>Achievements</SectionLabel>
-          <h2 className="section-heading mt-4">Milestones & <span className="text-gradient">Wins</span></h2>
+          <h2 className="section-heading mt-4">
+            Milestones & <span className="text-gradient">Wins</span>
+          </h2>
         </div>
         <div className="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {achievements.map((a) => {
             const Icon = a.icon;
             return (
-              <div key={a.title} className="glass rounded-2xl p-6 flex items-start gap-4 hover:border-primary/60 transition-all">
+              <div
+                key={a.title}
+                className="glass rounded-2xl p-6 flex items-start gap-4 hover:border-primary/60 transition-all"
+              >
                 <div className="grid h-11 w-11 shrink-0 place-items-center rounded-xl bg-[image:var(--gradient-primary)] text-primary-foreground shadow-[var(--shadow-glow)]">
                   <Icon className="h-5 w-5" />
                 </div>
@@ -771,8 +817,6 @@ function Contact() {
     }
   };
 
-
-
   const details = [
     { icon: Mail, label: "Email", value: "rajlolla09@gmail.com" },
     { icon: Github, label: "GitHub", value: "github.com/rajlolla09-rajS" },
@@ -785,7 +829,9 @@ function Contact() {
       <div className="mx-auto max-w-7xl px-6">
         <div className="text-center">
           <SectionLabel>Contact</SectionLabel>
-          <h2 className="section-heading mt-4">Let's <span className="text-gradient">Build</span> Together</h2>
+          <h2 className="section-heading mt-4">
+            Let's <span className="text-gradient">Build</span> Together
+          </h2>
           <p className="mt-4 text-muted-foreground max-w-xl mx-auto">
             Have an idea, an internship, or just want to connect? Drop a message — I usually reply within a day.
           </p>
@@ -796,7 +842,10 @@ function Contact() {
             {details.map((d) => {
               const Icon = d.icon;
               return (
-                <div key={d.label} className="flex items-center gap-4 rounded-2xl p-3 hover:bg-secondary/60 transition-colors">
+                <div
+                  key={d.label}
+                  className="flex items-center gap-4 rounded-2xl p-3 hover:bg-secondary/60 transition-colors"
+                >
                   <div className="grid h-11 w-11 shrink-0 place-items-center rounded-xl bg-[image:var(--gradient-primary)] text-primary-foreground shadow-[var(--shadow-glow)]">
                     <Icon className="h-5 w-5" />
                   </div>
@@ -837,7 +886,6 @@ function Contact() {
               <Send className="h-4 w-4 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
             </button>
           </form>
-
         </div>
       </div>
     </section>
@@ -864,8 +912,12 @@ function Footer() {
       <div className="mx-auto max-w-7xl px-6 py-12 grid gap-8 md:grid-cols-3 items-start">
         <div>
           <div className="flex items-center gap-2">
-            <span className="grid h-9 w-9 place-items-center rounded-xl bg-[image:var(--gradient-primary)] font-display font-bold text-primary-foreground">L</span>
-            <span className="font-display text-lg font-bold">Raj<span className="text-gradient">.</span></span>
+            <span className="grid h-9 w-9 place-items-center rounded-xl bg-[image:var(--gradient-primary)] font-display font-bold text-primary-foreground">
+              L
+            </span>
+            <span className="font-display text-lg font-bold">
+              Raj<span className="text-gradient">.</span>
+            </span>
           </div>
           <p className="mt-4 text-sm text-muted-foreground max-w-xs">
             Building thoughtful, AI-powered digital experiences — one project at a time.
@@ -875,7 +927,11 @@ function Footer() {
           <h4 className="font-display font-bold">Quick Links</h4>
           <ul className="mt-4 grid grid-cols-2 gap-2 text-sm text-muted-foreground">
             {["About", "Education", "Skills", "Services", "Projects", "Contact"].map((l) => (
-              <li key={l}><a href={`#${l.toLowerCase()}`} className="hover:text-foreground transition-colors">{l}</a></li>
+              <li key={l}>
+                <a href={`#${l.toLowerCase()}`} className="hover:text-foreground transition-colors">
+                  {l}
+                </a>
+              </li>
             ))}
           </ul>
         </div>
@@ -887,7 +943,13 @@ function Footer() {
               { icon: Linkedin, href: "https://www.linkedin.com/in/raj-venkata-apuroop-lolla-30410532b" },
               { icon: Mail, href: "#contact" },
             ].map(({ icon: Icon, href }, i) => (
-              <a key={i} href={href} target="_blank" rel="noreferrer" className="grid h-10 w-10 place-items-center rounded-xl glass hover:bg-[image:var(--gradient-primary)] hover:text-primary-foreground transition-all">
+              <a
+                key={i}
+                href={href}
+                target="_blank"
+                rel="noreferrer"
+                className="grid h-10 w-10 place-items-center rounded-xl glass hover:bg-[image:var(--gradient-primary)] hover:text-primary-foreground transition-all"
+              >
                 <Icon className="h-4 w-4" />
               </a>
             ))}
@@ -897,7 +959,9 @@ function Footer() {
       <div className="border-t border-border/60">
         <div className="mx-auto max-w-7xl px-6 py-5 text-xs text-muted-foreground flex flex-wrap justify-between gap-2">
           <span>© {new Date().getFullYear()} Lolla Raj Venkata Apuroop. All rights reserved.</span>
-          <span>Designed & Developed by <span className="text-gradient font-semibold">Lolla Raj Venkata Apuroop</span></span>
+          <span>
+            Designed & Developed by <span className="text-gradient font-semibold">Lolla Raj Venkata Apuroop</span>
+          </span>
         </div>
       </div>
     </footer>
