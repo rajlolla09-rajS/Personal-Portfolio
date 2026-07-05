@@ -741,12 +741,14 @@ function Contact() {
     const SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID as string | undefined;
     const TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID as string | undefined;
     const PUBLIC_KEY = import.meta.env.VITE_EMAILJS_PUBLIC_KEY as string | undefined;
+    const GENERIC_ERROR =
+      "Message could not be sent. Please try again later or contact me directly at rajlolla09@gmail.com.";
     if (!SERVICE_ID || !TEMPLATE_ID || !PUBLIC_KEY) {
-      const detail =
-        "Email service is not configured. Missing VITE_EMAILJS_SERVICE_ID, VITE_EMAILJS_TEMPLATE_ID, or VITE_EMAILJS_PUBLIC_KEY.";
-      console.error("[EmailJS]", detail);
-      setError(detail);
-      toast.error("Failed to send message", { description: detail });
+      console.error(
+        "[EmailJS] Missing configuration: VITE_EMAILJS_SERVICE_ID, VITE_EMAILJS_TEMPLATE_ID, or VITE_EMAILJS_PUBLIC_KEY.",
+      );
+      setError(GENERIC_ERROR);
+      toast.error("Failed to send message", { description: GENERIC_ERROR });
       setSending(false);
       return;
     }
@@ -762,13 +764,13 @@ function Contact() {
       const status = emailjsErr.status ?? "?";
       const reason = emailjsErr.text || (err instanceof Error ? err.message : "Unknown error");
       console.error("[EmailJS] Send failed:", { status, reason });
-      const detail = `EmailJS error (${status}): ${reason}`;
-      setError(detail);
-      toast.error("Failed to send message", { description: detail });
+      setError(GENERIC_ERROR);
+      toast.error("Failed to send message", { description: GENERIC_ERROR });
     } finally {
       setSending(false);
     }
   };
+
 
 
   const details = [
